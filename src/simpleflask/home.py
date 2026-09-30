@@ -8,10 +8,11 @@ home_bp = Blueprint('home', __name__)
 @home_bp.route("/", methods=["GET"])
 def home():
     routes = {
-        "Session Cookie"   : url_for('cookies.cookies'),
-        "File Input"        : url_for('input.input'),
-        "Picture Ref"       : url_for('picture.picture'),
-        "Server Status"     : url_for('status.status')
+        "Session Cookie": url_for('cookies.cookies'),
+        "File Input": url_for('input.input'),
+        "Picture Ref": url_for('picture.picture'),
+        "Server Status": url_for('status.status'),
+        "Health": url_for('health.health')
     }
 
     if not "session_id" in session:
